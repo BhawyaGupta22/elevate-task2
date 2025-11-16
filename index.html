@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css?v=100" />
+</head>
+<body>
+  <div class="app">
+    <header class="top-bar">
+      <div class="logo">To-Do App</div>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <main class="card">
+      <div class="card-header">
+        <div>
+          <h1>Today’s Tasks</h1>
+          <p class="subtitle" id="quote">Small steps every day 💪</p>
+        </div>
+      </div>
+
+      <div class="progress-wrapper">
+        <div id="progress-text">No tasks yet</div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="input-row">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="What do you need to get done?"
+        />
+        <select id="category">
+          <option value="Personal">Personal</option>
+          <option value="Study">Study</option>
+          <option value="Work">Work</option>
+          <option value="Health">Health</option>
+        </select>
+        <button id="add-btn">Add</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Pending</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="task-list"></ul>
+    </main>
+
+    <footer>
+      Built by <strong>Bhawya Gupta</strong> with ❤️ (Vanilla JavaScript)
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
